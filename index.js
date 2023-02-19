@@ -16,8 +16,7 @@ const app = fastify({
 });
 
 app.register(fastifyStatic, {
-    root: staticPath,
-    prefix: '/public/'
+    root: staticPath + '/public',
 });
 
 app.register(fastifyAutoRoutes, {
